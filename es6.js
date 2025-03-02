@@ -1,69 +1,23 @@
-// 1. array destructurting
-
-// const numbers = [42, 65];
-// const x = numbers[0];
-// const y = numbers[1];
-// console.log(x,y);
-
-// const [x,y] = [42,65];
-// console.log(x,y);
-
-// const [x,y] = numbers;
-// console.log(x,y);
-
-function boxify (num1,num2) {
-    const nums = [num1,num2];
-    return nums;
-}
-// console.log(boxify(20,30));
-
-const [first ,second] = boxify(20,30)
-// console.log(first,second);
-
-const student = {
-    name : 'Sakib Khan',
-    age : 32,
-    movies:['king khan','Dhakar Mastan']
-}
-
-// const [firstMovie , secondMovie] = ['King Khan','Dhakar Mastan'];
-// console.log(firstMovie,secondMovie);
-
-const [firstMovie,secondMovie] = student.movies;
-// console.log(firstMovie,secondMovie);
- 
-
-// Object destructuring
-// const {name ,age} = {name :'Alu', age : 14};
-// console.log(name,age);
-
-// const {name ,age,salary} = {id:12,name:'Alu',salary:3400,age:14};
-// console.log(name,salary);
-
-const employee = {
-    ide : 'Vs code',
-    designation : 'developer',
-    machine : 'mac',
-    language : ['html','css','javascript'],
-    specification:{
-        height : 66 ,
-        weight : 67,
-        address:'kumarkhali',
-        drink : 'Water',
-        watch :{
-            color : 'Black',
-            price : 500,
-            brand : 'garmin'
-        }
-    }
-   
-}
-const {machine , ide }= employee;
-// console.log(machine,ide);
-const {weight,address} = employee.specification;
-// console.log(weight,address);
-
-const { color,price } = employee?.specification?.watch;
-console.log(color,price);
+// for of on array like object
+// loop on an object using for in
 
 
+// add or remove from an array
+const products = [
+    {name : 'laptop',price : 3200,brand:'len',color:'silver'},
+    {name : 'phone',price : 7200,brand:'HTC',color:'golden'},
+    {name : 'watch',price : 3000,brand:'casio',color:'yellow'},
+    {name : 'sunglasses',price : 300,brand:'ray',color:'black'},
+    {name : 'camera',price : 3200,brand:'canon',color:'gray'}
+];
+const newProduct = {name:'webcam',price:700,brand:'Lal'};
+
+// copy products array and then add newProduct
+const newProducts = [...products,newProduct];
+// console.log(newProducts);
+
+
+// create a new array without one specific item
+// remove phone means create a new array without the phone
+const remaining = products.filter(product =>product.name!=='phone');
+// console.log(remaining);
