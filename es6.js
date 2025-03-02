@@ -1,3 +1,4 @@
+// index_5
 // for of on array like object
 // loop on an object using for in
 
@@ -21,3 +22,25 @@ const newProducts = [...products,newProduct];
 // remove phone means create a new array without the phone
 const remaining = products.filter(product =>product.name!=='phone');
 // console.log(remaining);
+
+
+
+
+//================================================
+// index_6
+
+
+// 'almas' , 5 ,true ,{} , []
+// '',0,false,null,undefined
+
+// check truthy
+let myVar = 5;
+if(myVar){
+   myVar = myVar *100;
+//    console.log(myVar);
+}
+else{
+   myVar = 0;
+//    console.log(myVar);
+
+}
