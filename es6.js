@@ -42,5 +42,14 @@ if(myVar){
 else{
    myVar = 0;
 //    console.log(myVar);
+}
+
+
+let myMoney = 50 ;
+// you check negative or falsy anything
+if(!myMoney){
+
+}
+else{
 
 }
